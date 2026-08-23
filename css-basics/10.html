@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Sticky header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: rgba(20, 30, 50, 0.95);
+            color: white;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        /* Hero section with background image */
+        .hero {
+            position: relative;
+            height: 80vh;
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 70, 120, 0.5)),
+                url("https://picsum.photos/1600/900?random=50");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Absolute positioning for welcome text */
+        .welcome {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border: 2px solid white;
+            outline: 5px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* About section in two columns */
+        .about {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 60px 10%;
+        }
+
+        .about div {
+            flex: 1;
+        }
+
+        .about img {
+            width: 40%;
+            border-radius: 10px;
+            border: 3px solid #333;
+        }
+
+        /* Services section */
+        .services {
+            display: flex;
+            gap: 25px;
+            padding: 60px 10%;
+            background: linear-gradient(to right, #dbeafe, #e0f2fe);
+        }
+
+        .service-box {
+            flex: 1;
+            padding: 30px;
+            margin: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid #2563eb;
+            outline: 2px solid rgba(37, 99, 235, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #aaa;
+        }
+
+        button {
+            padding: 12px 30px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+        }
+
+        /* Fixed position button */
+        .fixed-button {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: #111;
+            padding: 15px;
+        }
+
+        .fixed-button a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #111827;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header,
+            .about,
+            .services {
+                flex-direction: column;
+            }
+
+            header {
+                align-items: flex-start;
+            }
+
+            .about img {
+                width: 100%;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+
+            nav a {
+                margin-left: 5px;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Website</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="welcome">
+            <h2>Welcome to My Website</h2>
+            <p>Learn, Build and Grow with Technology</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div>
+            <h2>About Us</h2>
+            <p>
+                We focus on creating modern and useful digital experiences.
+                Our goal is to build simple and effective solutions.
+            </p>
+        </div>
+
+        <img src="https://picsum.photos/500/400?random=60" alt="About Us">
+    </section>
+
+    <section id="services" class="services">
+
+        <div class="service-box">
+            <h3>Web Development</h3>
+            <p>Creating modern and responsive websites.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>App Development</h3>
+            <p>Building useful applications for users.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Consulting</h3>
+            <p>Helping people with technology solutions.</p>
+        </div>
+
+    </section>
+
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <form>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea rows="5" placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
+        </form>
+
+    </section>
+
+    <div class="fixed-button">
+        <a href="#home">Top</a>
+    </div>
+
+    <footer>
+        <p>© 2026 My Website. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            background-color: #1e293b;
+            color: white;
+            padding: 10px 30px;
+            z-index: 1;
+        }
+
+        .layout {
+            display: flex;
+            padding-top: 70px;
+        }
+
+        aside {
+            width: 220px;
+            min-height: 100vh;
+            background-color: #334155;
+            padding: 30px;
+        }
+
+        aside a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        main {
+            flex: 1;
+            padding: 30px;
+            display: flex;
+            gap: 25px;
+        }
+
+        .box {
+            flex: 1;
+            padding: 30px;
+            background-color: #f1f5f9;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            .layout,
+            main {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Dashboard</h1>
+    </header>
+
+    <div class="layout">
+
+        <aside>
+            <a href="#">Home</a>
+            <a href="#">Profile</a>
+            <a href="#">Projects</a>
+            <a href="#">Settings</a>
+        </aside>
+
+        <main>
+
+            <section class="box">
+                <h2>Projects</h2>
+                <p>You have 5 active projects.</p>
+            </section>
+
+            <section class="box">
+                <h2>Tasks</h2>
+                <p>You have 12 tasks to complete.</p>
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
