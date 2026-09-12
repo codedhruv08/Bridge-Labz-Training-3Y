@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Webpage</title>
+</head>
+<body style="margin:0; font-family:Arial;">
+
+<div class="page">
+
+<header>
+
+    <h2>My Website</h2>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
+
+</header>
+
+<main>
+
+    <article>
+
+        <h1 class="title">Welcome to My Website</h1>
+
+        <div class="boxes">
+
+            <div>HTML</div>
+            <div>CSS</div>
+            <div>Java</div>
+
+        </div>
+
+        <p>
+            This is my responsive webpage created using
+            CSS Grid and Flexbox.
+        </p>
+
+    </article>
+
+    <aside>
+        <h2>Sidebar</h2>
+        <p>Latest Posts</p>
+        <p>Categories</p>
+        <p>Useful Links</p>
+    </aside>
+
+</main>
+
+<footer>
+    © 2026 My Website
+</footer>
+
+</div>
+
+<style>
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:#222;
+    color:white;
+}
+
+nav {
+    display:flex;
+    gap:25px;
+}
+
+nav a {
+    color:white;
+    text-decoration:none;
+}
+
+main {
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+    padding:30px;
+    min-height:500px;
+}
+
+article {
+    padding:20px;
+}
+
+aside {
+    background:#eee;
+    padding:25px;
+}
+
+.boxes {
+    display:flex;
+    gap:20px;
+}
+
+.boxes div {
+    flex:1;
+    padding:40px;
+    text-align:center;
+    background:#ddd;
+}
+
+.title {
+    animation:showTitle 1s ease;
+}
+
+footer {
+    text-align:center;
+    padding:20px;
+    background:#222;
+    color:white;
+}
+
+@keyframes showTitle {
+    from {
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:700px) {
+
+    header {
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav {
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+    }
+
+    main {
+        grid-template-columns:1fr;
+    }
+
+    .boxes {
+        flex-direction:column;
+    }
+}
+</style>
+
+</body>
+</html>

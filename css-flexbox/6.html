@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+</head>
+<body style="margin:0; font-family:Arial;">
+
+<div class="blog">
+
+<header>
+    <h1>My Blog</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<aside>
+    <h2>Categories</h2>
+    <p>Technology</p>
+    <p>Programming</p>
+    <p>Education</p>
+    <p>Travel</p>
+</aside>
+
+<main>
+
+    <article>
+        <h2>Learning Web Development</h2>
+        <p>Web development is an important skill for computer science students.</p>
+    </article>
+
+    <article>
+        <h2>Why Learn Programming?</h2>
+        <p>Programming helps us solve real-world problems using computers.</p>
+    </article>
+
+</main>
+
+<footer>
+    Contact: example@email.com
+</footer>
+
+</div>
+
+<style>
+.blog {
+    display:grid;
+    grid-template-columns:220px 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    gap:20px;
+    min-height:100vh;
+}
+
+header {
+    grid-area:header;
+    background:#222;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header nav {
+    display:flex;
+    gap:20px;
+}
+
+header a {
+    color:white;
+}
+
+aside {
+    grid-area:sidebar;
+    background:#eee;
+    padding:20px;
+}
+
+main {
+    grid-area:main;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    padding:20px;
+}
+
+article {
+    padding:25px;
+    background:#f1f1f1;
+}
+
+footer {
+    grid-area:footer;
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:800px) {
+    .blog {
+        grid-template-columns:1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+    }
+
+    main {
+        grid-template-columns:1fr;
+    }
+
+    header {
+        flex-direction:column;
+        gap:15px;
+    }
+}
+</style>
+
+</body>
+</html>

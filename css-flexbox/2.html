@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Gallery</title>
+</head>
+<body style="margin:0; font-family:Arial; background:#f2f2f2;">
+
+<h1 style="text-align:center; padding:20px;">Product Gallery</h1>
+
+<div style="
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:20px;
+    padding:30px;
+">
+
+    <div style="background:white; padding:30px; text-align:center; min-height:100px; transition:0.3s;"
+         onmouseover="this.style.transform='scale(1.05)'"
+         onmouseout="this.style.transform='scale(1)'">
+        <h3>Laptop</h3>
+        <p>₹50,000</p>
+    </div>
+
+    <div style="background:white; padding:30px; text-align:center; min-height:100px; transition:0.3s;"
+         onmouseover="this.style.transform='scale(1.05)'"
+         onmouseout="this.style.transform='scale(1)'">
+        <h3>Mobile</h3>
+        <p>₹25,000</p>
+    </div>
+
+    <div style="background:white; padding:30px; text-align:center; min-height:100px; transition:0.3s;"
+         onmouseover="this.style.transform='scale(1.05)'"
+         onmouseout="this.style.transform='scale(1)'">
+        <h3>Headphones</h3>
+        <p>₹2,000</p>
+    </div>
+
+    <div style="background:white; padding:30px; text-align:center; min-height:100px; transition:0.3s;"
+         onmouseover="this.style.transform='scale(1.05)'"
+         onmouseout="this.style.transform='scale(1)'">
+        <h3>Keyboard</h3>
+        <p>₹1,500</p>
+    </div>
+
+    <div style="background:white; padding:30px; text-align:center; min-height:100px; transition:0.3s;"
+         onmouseover="this.style.transform='scale(1.05)'"
+         onmouseout="this.style.transform='scale(1)'">
+        <h3>Mouse</h3>
+        <p>₹800</p>
+    </div>
+
+    <div style="background:white; padding:30px; text-align:center; min-height:100px; transition:0.3s;"
+         onmouseover="this.style.transform='scale(1.05)'"
+         onmouseout="this.style.transform='scale(1)'">
+        <h3>Monitor</h3>
+        <p>₹12,000</p>
+    </div>
+
+    <div style="background:white; padding:30px; text-align:center; min-height:100px; transition:0.3s;"
+         onmouseover="this.style.transform='scale(1.05)'"
+         onmouseout="this.style.transform='scale(1)'">
+        <h3>Tablet</h3>
+        <p>₹20,000</p>
+    </div>
+
+    <div style="background:white; padding:30px; text-align:center; min-height:100px; transition:0.3s;"
+         onmouseover="this.style.transform='scale(1.05)'"
+         onmouseout="this.style.transform='scale(1)'">
+        <h3>Smart Watch</h3>
+        <p>₹5,000</p>
+    </div>
+
+</div>
+
+<style>
+@media (max-width:900px) {
+    div[style*="grid-template-columns"] {
+        grid-template-columns:repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width:600px) {
+    div[style*="grid-template-columns"] {
+        grid-template-columns:1fr !important;
+    }
+}
+</style>
+
+</body>
+</html>

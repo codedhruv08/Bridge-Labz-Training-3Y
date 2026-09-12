@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Portfolio</title>
+</head>
+<body style="margin:0; font-family:Arial;">
+
+<header style="display:flex; justify-content:space-between; align-items:center; padding:20px; background:#222; color:white;">
+    <h2 style="margin:0;">Dhruv Gautam</h2>
+
+    <nav style="display:flex; gap:20px;">
+        <a href="#" style="color:white; text-decoration:none;">Home</a>
+        <a href="#" style="color:white; text-decoration:none;">About</a>
+        <a href="#" style="color:white; text-decoration:none;">Contact</a>
+    </nav>
+</header>
+
+<main style="display:flex; align-items:center; justify-content:center; gap:50px; padding:60px; min-height:400px;">
+
+    <section style="flex:1; text-align:center;">
+        <h1>About Me</h1>
+        <p>
+            Hello! I am Dhruv, a Computer Science student.
+            I am interested in Web Development and Software Development.
+        </p>
+    </section>
+
+    <section style="flex:1; text-align:center;">
+        <img src="https://via.placeholder.com/250"
+             alt="Profile"
+             style="width:250px; height:250px; border-radius:50%;">
+    </section>
+
+</main>
+
+<footer style="text-align:center; padding:20px; background:#222; color:white;">
+    © 2026 Dhruv Gautam. All Rights Reserved.
+</footer>
+
+<style>
+@media (max-width:700px) {
+    header, main {
+        flex-direction:column;
+    }
+
+    nav {
+        flex-direction:column;
+        align-items:center;
+    }
+}
+</style>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pricing</title>
+</head>
+<body style="margin:0; font-family:Arial;">
+
+<h1 style="text-align:center;">Pricing Plans</h1>
+
+<div class="pricing">
+
+    <div class="card">
+        <h2>Basic</h2>
+        <h3>₹499</h3>
+        <p>5 Projects</p>
+        <p>Email Support</p>
+    </div>
+
+    <div class="card middle">
+        <h2>Pro</h2>
+        <h3>₹999</h3>
+        <p>20 Projects</p>
+        <p>Priority Support</p>
+    </div>
+
+    <div class="card">
+        <h2>Premium</h2>
+        <h3>₹1499</h3>
+        <p>Unlimited Projects</p>
+        <p>24/7 Support</p>
+    </div>
+
+</div>
+
+<style>
+.pricing {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    padding:50px;
+}
+
+.card {
+    width:250px;
+    padding:30px;
+    text-align:center;
+    background:#eee;
+    transition:0.3s;
+    animation:fade 1s ease;
+}
+
+.middle {
+    transform:scale(1.1);
+    background:#d9f0ff;
+}
+
+.card:hover {
+    transform:translateY(-10px);
+}
+
+@keyframes fade {
+    from {
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to {
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:750px) {
+    .pricing {
+        flex-direction:column;
+    }
+
+    .middle {
+        transform:scale(1);
+    }
+}
+</style>
+
+</body>
+</html>
