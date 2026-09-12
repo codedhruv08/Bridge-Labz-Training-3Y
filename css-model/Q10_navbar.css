@@ -1,0 +1,85 @@
+/* Q10: Responsive navigation with transitions */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #111827;
+}
+
+.logo {
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: #374151;
+    border-color: #9ca3af;
+}
+
+.nav-links a.active {
+    background: #2563eb;
+    border-bottom: 3px solid #facc15;
+}
+
+main section {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    text-align: center;
+}
+
+main section:nth-child(even) {
+    background: #f3f4f6;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #111827;
+    color: white;
+}
+
+/* Stack navigation below 700px */
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        text-align: center;
+        width: 100%;
+    }
+}

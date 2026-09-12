@@ -1,0 +1,48 @@
+/* Q7: Typography and text styling */
+body {
+    margin: 0;
+    background: #f8fafc;
+    color: #1f2937;
+}
+
+article {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 40px;
+    background: white;
+    line-height: 1.8;
+}
+
+h1 {
+    font-size: 2.4em;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.serif { font-family: Georgia, serif; font-size: 1.2em; }
+.sans { font-family: Arial, sans-serif; font-weight: 600; font-size: 18px; }
+.mono { font-family: "Courier New", monospace; font-size: 1.1em; }
+
+mark {
+    background: #fde68a;
+    color: #7c2d12;
+    padding: 2px 5px;
+}
+
+strong { color: #dc2626; }
+em { color: #2563eb; }
+
+.readable {
+    text-align: justify;
+    letter-spacing: 0.5px;
+}
+
+/* Pseudo-element: emphasize the first letter */
+article p::first-letter {
+    font-size: 1.5em;
+}
+
+/* Pseudo-element: style the first line */
+article p::first-line {
+    font-weight: 500;
+}

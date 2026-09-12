@@ -1,0 +1,72 @@
+/* Q8: Box model layers */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    text-align: center;
+}
+
+main {
+    padding: 30px;
+}
+
+.demo-area {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.margin-layer {
+    padding: 35px;
+    background: #fecaca; /* Visual representation of margin */
+    outline: 2px dashed #dc2626;
+}
+
+.border-layer {
+    padding: 25px;
+    background: #fde68a; /* Visual representation of border area */
+    border: 10px solid #92400e;
+}
+
+.padding-layer {
+    padding: 25px;
+    background: #bbf7d0; /* Visual representation of padding */
+}
+
+.content-layer {
+    width: 180px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #bfdbfe; /* Content */
+}
+
+.description {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: left;
+    background: white;
+    padding: 20px;
+}
+
+.comparison {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.default-box, .border-box {
+    width: 250px;
+    height: 120px;
+    padding: 30px;
+    border: 10px solid #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.default-box { box-sizing: content-box; background: #dbeafe; }
+.border-box { box-sizing: border-box; background: #dcfce7; }

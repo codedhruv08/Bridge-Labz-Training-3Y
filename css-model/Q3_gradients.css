@@ -1,0 +1,43 @@
+/* Q3: Linear and radial gradients */
+* { box-sizing: border-box; }
+
+html, body { margin: 0; }
+
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+header, footer {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: #111827;
+    padding: 15px;
+    z-index: 10;
+}
+
+header { top: 0; }
+footer { bottom: 0; }
+
+main { padding-top: 75px; padding-bottom: 65px; }
+
+.gradient-section {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.linear {
+    background: linear-gradient(120deg, #2563eb, #9333ea, #ec4899);
+    background-attachment: fixed; /* Parallax-like effect */
+}
+
+.radial {
+    background: radial-gradient(circle, #f59e0b, #ef4444, #7f1d1d);
+}

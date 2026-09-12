@@ -1,0 +1,44 @@
+/* Q4: Box-shadow, text-shadow and hover lift */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+header h1 {
+    text-shadow: 3px 3px 5px #aaa;
+}
+
+.cards {
+    display: flex; /* Single row */
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.card {
+    width: 260px;
+    min-height: 200px;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    transition: all 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-one { box-shadow: 5px 5px 12px #aaa; }
+.shadow-two { box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3); }
+.shadow-three { box-shadow: inset 0 0 15px #bbb, 0 5px 10px #ccc; }

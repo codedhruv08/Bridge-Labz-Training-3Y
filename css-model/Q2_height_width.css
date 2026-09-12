@@ -1,0 +1,56 @@
+/* Q2: Height and width units */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #eef2ff;
+}
+
+.layout {
+    min-height: 100vh;
+    display: flex; /* Center boxes horizontally and vertically */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 25px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    border-radius: 12px;
+}
+
+.box-one {
+    width: 200px;
+    height: 150px;
+    background: #2563eb;
+}
+
+.box-two {
+    width: 60%;
+    min-height: 180px;
+    background: #16a34a;
+}
+
+.box-three {
+    width: 25em;
+    height: 25vh;
+    max-width: 90%;
+    min-height: 160px;
+    overflow: auto; /* Controls content that exceeds the box */
+    background: #9333ea;
+}
+
+@media (max-width: 700px) {
+    .box-two { width: 90%; }
+    .box-three { width: 90%; }
+}
