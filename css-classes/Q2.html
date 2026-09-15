@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q2 - Tooltip</title>
+<style>
+.tooltip{position:relative;display:inline-block}
+.tooltip-text{position:absolute;bottom:130%;left:50%;transform:translateX(-50%);background:#111827;color:white;padding:8px 12px;border-radius:5px;white-space:nowrap;opacity:0;visibility:hidden;transition:opacity .3s ease-in-out}
+.tooltip:hover .tooltip-text{opacity:1;visibility:visible}
+</style>
+</head>
+<body style="margin:0;min-height:100vh;font-family:Arial,sans-serif;background:#eef2f7;display:flex;justify-content:center;align-items:center">
+<main style="text-align:center"><h1>CSS Tooltip Demonstration</h1><p>Hover over the elements.</p>
+<section style="display:flex;justify-content:center;gap:30px;margin-top:60px;flex-wrap:wrap">
+<div class="tooltip" style="background:#2563eb;color:white;padding:15px 25px;border-radius:8px;cursor:pointer">Home<span class="tooltip-text">Go to Home</span></div>
+<div class="tooltip" style="background:#16a34a;color:white;padding:15px 25px;border-radius:8px;cursor:pointer">Profile<span class="tooltip-text">View Profile</span></div>
+<div class="tooltip" style="background:#9333ea;color:white;padding:15px 25px;border-radius:8px;cursor:pointer">Settings<span class="tooltip-text">Open Settings</span></div>
+<div class="tooltip" style="background:#ea580c;color:white;padding:15px 25px;border-radius:8px;cursor:pointer">Help<span class="tooltip-text">Get Help</span></div>
+</section></main>
+</body></html>

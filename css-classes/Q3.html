@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q3 - Image Showcase</title>
+<style>
+.image-box{position:relative;overflow:hidden;border-radius:10px}
+.image-box img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .3s ease}
+.image-box:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,0);transition:background .3s ease}
+.image-box:hover img{transform:scale(1.1)}
+.image-box:hover:after{background:rgba(0,0,0,.35)}
+@media(max-width:700px){.gallery{grid-template-columns:1fr!important}}
+</style></head>
+<body style="margin:0;font-family:Arial,sans-serif;background:#f3f4f6">
+<header style="background:#1e3a5f;color:white;text-align:center;padding:25px"><h1>Image Showcase</h1><p>Hover over images to see the effect.</p></header>
+<main class="gallery" style="display:grid;grid-template-columns:repeat(3,1fr);gap:25px;padding:40px">
+<figure style="margin:0;background:white;border-radius:10px;overflow:hidden;box-shadow:0 4px 10px #bbb"><div class="image-box"><img src="image1.jpg" alt="Nature"></div><figcaption style="text-align:center;padding:15px;font-weight:bold">Beautiful Nature</figcaption></figure>
+<figure style="margin:0;background:white;border-radius:10px;overflow:hidden;box-shadow:0 4px 10px #bbb"><div class="image-box"><img src="image2.jpg" alt="Mountain"></div><figcaption style="text-align:center;padding:15px;font-weight:bold">Mountain View</figcaption></figure>
+<figure style="margin:0;background:white;border-radius:10px;overflow:hidden;box-shadow:0 4px 10px #bbb"><div class="image-box"><img src="image3.jpg" alt="Beach"></div><figcaption style="text-align:center;padding:15px;font-weight:bold">Peaceful Beach</figcaption></figure>
+<figure style="margin:0;background:white;border-radius:10px;overflow:hidden;box-shadow:0 4px 10px #bbb"><div class="image-box"><img src="image4.jpg" alt="Forest"></div><figcaption style="text-align:center;padding:15px;font-weight:bold">Green Forest</figcaption></figure>
+<figure style="margin:0;background:white;border-radius:10px;overflow:hidden;box-shadow:0 4px 10px #bbb"><div class="image-box"><img src="image5.jpg" alt="City"></div><figcaption style="text-align:center;padding:15px;font-weight:bold">Modern City</figcaption></figure>
+<figure style="margin:0;background:white;border-radius:10px;overflow:hidden;box-shadow:0 4px 10px #bbb"><div class="image-box"><img src="image6.jpg" alt="Sunset"></div><figcaption style="text-align:center;padding:15px;font-weight:bold">Beautiful Sunset</figcaption></figure>
+</main></body></html>

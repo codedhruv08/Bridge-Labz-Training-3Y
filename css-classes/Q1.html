@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q1 - Pseudo Classes</title>
+<style>
+.hover-link:hover{background:#2563eb;color:white!important}
+.focus-input:focus{border-color:#2563eb!important;outline:none;background:#eff6ff}
+.active-btn:active{background:#166534!important;transform:scale(.95)}
+.list-item:nth-child(even){background:#dbeafe}
+</style>
+</head>
+<body style="margin:0;font-family:Arial,sans-serif;background:#f3f4f6">
+<header style="background:#1e3a5f;color:white;text-align:center;padding:25px">
+<h1 style="margin:0">Pseudo-Classes Demonstration</h1><p>Hover, focus, active and nth-child()</p>
+</header>
+<main style="display:flex;justify-content:center;gap:20px;padding:40px;flex-wrap:wrap">
+<section style="background:white;width:220px;padding:25px;text-align:center;border-radius:10px;box-shadow:0 4px 10px #bbb">
+<h2>:hover</h2><a href="#" class="hover-link" style="display:inline-block;padding:10px 15px;color:#2563eb;text-decoration:none;border-radius:5px">Hover Me</a>
+<p>Changes style when the mouse is over an element.</p></section>
+<section style="background:white;width:220px;padding:25px;text-align:center;border-radius:10px;box-shadow:0 4px 10px #bbb">
+<h2>:focus</h2><input class="focus-input" type="text" placeholder="Click here" style="padding:10px;width:80%;border:2px solid #ccc;border-radius:5px">
+<p>Works when an input receives focus.</p></section>
+<section style="background:white;width:220px;padding:25px;text-align:center;border-radius:10px;box-shadow:0 4px 10px #bbb">
+<h2>:active</h2><button class="active-btn" style="padding:10px 20px;border:0;border-radius:5px;background:#22c55e;color:white;cursor:pointer">Press Me</button>
+<p>Works while the button is being clicked.</p></section>
+<section style="background:white;width:220px;padding:25px;text-align:center;border-radius:10px;box-shadow:0 4px 10px #bbb">
+<h2>:nth-child()</h2><ul style="padding:0;list-style:none">
+<li class="list-item" style="padding:8px">Item 1</li><li class="list-item" style="padding:8px">Item 2</li><li class="list-item" style="padding:8px">Item 3</li><li class="list-item" style="padding:8px">Item 4</li>
+</ul><p>Selects elements according to their position.</p></section>
+</main>
+<footer style="background:#1e3a5f;color:white;text-align:center;padding:15px">Pseudo-Classes Practice</footer>
+</body>
+</html>

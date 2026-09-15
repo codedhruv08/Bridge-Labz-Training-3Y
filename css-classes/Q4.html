@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Q4 - CSS Selectors</title>
+<style>
+p{line-height:1.6}.highlight{background:#fef3c7;padding:10px}#special{color:#dc2626;font-weight:bold}
+a[href]{color:#2563eb;font-weight:bold}.box div p{background:#dcfce7;padding:10px}.box>p{border-left:4px solid #2563eb;padding-left:10px}
+h3+p{color:#9333ea;font-weight:bold}h3~p{text-decoration:underline}
+</style></head>
+<body style="margin:0;font-family:Arial,sans-serif;background:#f3f4f6">
+<header style="background:#1e3a5f;color:white;text-align:center;padding:25px"><h1>CSS Selectors Practice</h1></header>
+<main style="padding:30px">
+<section style="background:white;padding:20px;margin:20px auto;max-width:800px;border-radius:10px"><h2>Element Selector</h2><p>This paragraph uses an element selector.</p></section>
+<section style="background:white;padding:20px;margin:20px auto;max-width:800px;border-radius:10px"><h2>Class Selector</h2><p class="highlight">This paragraph uses a class selector.</p></section>
+<section style="background:white;padding:20px;margin:20px auto;max-width:800px;border-radius:10px"><h2>ID Selector</h2><p id="special">This paragraph uses an ID selector.</p></section>
+<section style="background:white;padding:20px;margin:20px auto;max-width:800px;border-radius:10px"><h2>Attribute Selector</h2><a href="https://example.com">Example Link</a></section>
+<section class="box" style="background:white;padding:20px;margin:20px auto;max-width:800px;border-radius:10px"><h2>Combinators</h2><div><p>Descendant paragraph inside div.</p></div><p>Direct child paragraph.</p><h3>Heading</h3><p>Adjacent sibling paragraph.</p><p>General sibling paragraph.</p></section>
+</main>
+<footer style="background:#1e3a5f;color:white;text-align:center;padding:15px">CSS Selectors Practice</footer>
+</body></html>

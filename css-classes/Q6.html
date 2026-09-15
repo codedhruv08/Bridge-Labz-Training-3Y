@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Q6 - CSS Animation</title>
+<style>
+.moving-box{animation:moveBox 3s ease-in-out infinite alternate}
+@keyframes moveBox{from{transform:translateX(-150px)}to{transform:translateX(150px)}}
+.ball{animation:bounce 1s ease-in-out infinite alternate;animation-delay:.5s}
+@keyframes bounce{from{transform:translateY(-40px)}to{transform:translateY(40px)}}
+.animated-text{animation:textAnimation 3s ease-in-out infinite alternate}
+@keyframes textAnimation{from{transform:scale(.8);opacity:.4}to{transform:scale(1.2);opacity:1}}
+</style></head>
+<body style="margin:0;min-height:100vh;font-family:Arial,sans-serif;background:#eef2f7">
+<main style="min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:40px;overflow:hidden">
+<h1>CSS Animation Demonstration</h1>
+<div class="moving-box" style="width:60px;height:60px;background:#2563eb;border-radius:8px"></div>
+<div class="ball" style="width:50px;height:50px;background:#ef4444;border-radius:50%"></div>
+<h2 class="animated-text">Animated Text</h2>
+</main></body></html>

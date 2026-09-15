@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Q5 - Buttons</title>
+<style>
+button{transition:all .3s ease}button:not(:disabled):hover{transform:translateY(-3px);box-shadow:0 6px 12px #aaa}button:not(:disabled):active{transform:scale(.95)}button:focus{outline:3px solid #facc15;outline-offset:3px}button:disabled{cursor:not-allowed;opacity:.6}
+</style></head>
+<body style="margin:0;min-height:100vh;font-family:Arial,sans-serif;background:#eef2f7;display:flex;justify-content:center;align-items:center">
+<main style="text-align:center;padding:30px"><h1>Styled Button Collection</h1>
+<section style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:40px">
+<button style="padding:12px 25px;border:2px solid #2563eb;border-radius:8px;background:#2563eb;color:white;cursor:pointer">Primary</button>
+<button style="padding:12px 25px;border:2px solid #16a34a;border-radius:8px;background:#16a34a;color:white;cursor:pointer">Secondary</button>
+<button style="padding:12px 25px;border:2px solid #2563eb;border-radius:8px;background:white;color:#2563eb;cursor:pointer">Outline</button>
+<button disabled style="padding:12px 25px;border:2px solid #aaa;border-radius:8px;background:#ccc;color:#666">Disabled</button>
+</section><p>Use hover, active, focus and disabled states.</p></main></body></html>

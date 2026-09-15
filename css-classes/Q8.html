@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Q8 - Box Sizing</title>
+<style>
+.content-box{box-sizing:content-box}.border-box{box-sizing:border-box}
+@media(max-width:700px){.comparison{flex-direction:column!important;align-items:center}}
+</style></head>
+<body style="margin:0;min-height:100vh;font-family:Arial,sans-serif;background:#eef2f7;display:flex;justify-content:center;align-items:center">
+<main style="width:90%;max-width:900px;text-align:center">
+<h1>Box-Sizing Comparison</h1>
+<section class="comparison" style="display:flex;justify-content:center;gap:50px;margin:40px 0">
+<div class="content-box" style="width:250px;padding:20px;border:5px solid #dc2626;background:#fee2e2;border-radius:10px"><h2>content-box</h2><p>Width = 250px<br>Padding = 20px<br>Border = 5px</p><strong>Total width becomes larger.</strong></div>
+<div class="border-box" style="width:250px;padding:20px;border:5px solid #16a34a;background:#dcfce7;border-radius:10px"><h2>border-box</h2><p>Width = 250px<br>Padding = 20px<br>Border = 5px</p><strong>Total width remains 250px.</strong></div>
+</section>
+<p style="line-height:1.6">In content-box, padding and border are added outside the declared width. In border-box, padding and border are included inside the declared width.</p>
+</main></body></html>
