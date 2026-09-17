@@ -1,0 +1,60 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f2f5;
+  color: #222;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.2rem;
+  background-color: #06b6d4;
+  color: #fff;
+}
+
+/* ===== Card Row: 4 columns on desktop via Flexbox ===== */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  /* Desktop: 4 columns -> each card takes ~25% minus gap */
+  flex: 1 1 calc(25% - 1.5rem);
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: #a5f3fc;
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+  color: #0e7490;
+}
+
+/* ===== Tablet: 2 columns below 900px ===== */
+@media (max-width: 900px) {
+  .card {
+    flex: 1 1 calc(50% - 1.5rem);
+  }
+}
+
+/* ===== Mobile: 1 column below 600px ===== */
+@media (max-width: 600px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}

@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+}
+
+/* ===== Header: logo left, nav right ===== */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  background-color: #1d3557;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Main: three feature boxes horizontally ===== */
+.features {
+  display: flex;
+  gap: 1.5rem;
+  padding: 2.5rem 2rem;
+}
+
+.feature-box {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+}
+
+.feature-box h2 {
+  margin-bottom: 0.6rem;
+  color: #1d3557;
+}
+
+/* ===== Footer centered ===== */
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1d3557;
+  color: #fff;
+}
+
+/* ===== Responsive: stack feature boxes below 750px ===== */
+@media (max-width: 750px) {
+  .features {
+    flex-direction: column;
+  }
+}

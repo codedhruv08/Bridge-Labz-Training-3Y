@@ -1,0 +1,72 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Trebuchet MS', Arial, sans-serif;
+  background-color: #f7f7f2;
+  color: #222;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.2rem;
+  background-color: #264653;
+  color: #fff;
+}
+
+/* ===== Grid layout: 2-3 columns on large screens ===== */
+.cheat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.cheat-box {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cheat-box:hover {
+  background-color: #e9f5f3;
+  transform: translateY(-4px);
+}
+
+.cheat-box h2 {
+  color: #2a9d8f;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Small screens: stacked key/value rows ===== */
+@media (max-width: 700px) {
+  .cheat-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .cheat-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-radius: 0;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem;
+  }
+
+  /* Heading acts as the "key" */
+  .cheat-box h2 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Paragraph acts as the "value" directly below the key */
+  .cheat-box p {
+    font-size: 0.95rem;
+    color: #444;
+  }
+}

@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: #fff8f0;
+  color: #333;
+}
+
+/* ===== Section centered with balanced spacing ===== */
+.typography-section {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+/* ===== Fluid typography using clamp() ===== */
+h1 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  margin-bottom: 1.5rem;
+  color: #7c3f00;
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.7;
+  margin: 0 auto;
+}
+
+/* ===== Adjust spacing/line-height for smaller screens ===== */
+@media (max-width: 700px) {
+  .typography-section {
+    margin: 2rem auto;
+    padding: 1.5rem 1rem;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+}
