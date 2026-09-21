@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WanderGo Travel Agency</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="q10.css">
+</head>
+<body>
+
+<header class="bg-dark text-white text-center py-3">
+  <h1 class="mb-0">WanderGo Travel</h1>
+</header>
+
+<main>
+  <!-- Bootstrap Carousel with 3 slides, custom intervals -->
+  <div id="destinationCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#destinationCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="4000">
+        <img src="https://placehold.co/1200x500" class="d-block w-100" alt="Santorini, Greece">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Santorini, Greece</h5>
+          <p>Whitewashed cliffs and endless sunsets.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="6000">
+        <img src="https://placehold.co/1200x500" class="d-block w-100" alt="Kyoto, Japan">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Kyoto, Japan</h5>
+          <p>Ancient temples and cherry blossoms.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="https://placehold.co/1200x500" class="d-block w-100" alt="Banff, Canada">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Banff, Canada</h5>
+          <p>Turquoise lakes surrounded by mountains.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#destinationCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#destinationCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- Booking progress bar -->
+  <section class="container my-5">
+    <h4 class="text-center mb-3">Your Booking Progress</h4>
+    <div class="progress" style="height: 25px;">
+      <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
+           role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+        70%
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-dark text-white text-center py-4">
+  <p class="mb-1">Contact us: info@wandergo.com | +1 (555) 123-4567</p>
+  <p class="mb-0">&copy; 2026 WanderGo Travel Agency</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
