@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Special Offer Banner</title>
+  <style>
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Arial, sans-serif; max-width: 860px; margin: 0 auto; padding: 24px; background: #f5f6fa; color: #222; line-height: 1.5; }
+header, footer { text-align: center; padding: 12px; }
+h1 { margin: 0 0 4px; }
+section { background: #fff; border-radius: 10px; padding: 18px; margin: 16px 0; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+button { background: #3b5bdb; color: #fff; border: 0; padding: 8px 14px; border-radius: 6px; cursor: pointer; margin: 4px 4px 4px 0; font-size: 14px; }
+button:hover { background: #2f49b0; }
+input, select { padding: 8px; border: 1px solid #bbb; border-radius: 6px; margin: 4px 4px 4px 0; font-size: 14px; }
+ul { list-style: none; padding: 0; margin: 0; }
+    .banner { padding: 18px; border-radius: 8px; margin-bottom: 10px; color: #fff; font-weight: bold; text-align: center; }
+    #b1 { background: #e8590c; } #b2 { background: #2f9e44; } #b3 { background: #7048e8; }
+    #b4 { background: #1c7ed6; } #b5 { background: #c2255c; }
+    #rotator { position: relative; height: 80px; }
+    .slide { position: absolute; inset: 0; display: none; line-height: 80px; text-align: center; border-radius: 8px; color: #fff; font-size: 1.2rem; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <header><h1>Special Offer Banners</h1></header>
+  <main>
+    <section>
+      <h2>Banner controls</h2>
+      <label for="target">Apply to:</label>
+      <select id="target">
+        <option value="all">All banners</option>
+        <option value="b1">Banner 1</option><option value="b2">Banner 2</option>
+        <option value="b3">Banner 3</option><option value="b4">Banner 4</option>
+        <option value="b5">Banner 5</option>
+      </select>
+      <div>
+        <button data-action="hide">Hide</button>
+        <button data-action="show">Show</button>
+        <button data-action="slideUp">Slide Up</button>
+        <button data-action="slideDown">Slide Down</button>
+        <button data-action="fadeOut">Fade Out</button>
+        <button data-action="fadeIn">Fade In</button>
+      </div>
+      <div id="banners">
+        <div class="banner" id="b1">Flat 50% OFF on Electronics</div>
+        <div class="banner" id="b2">Buy 1 Get 1 Free on Fashion</div>
+        <div class="banner" id="b3">Free Delivery on Orders Above 499</div>
+        <div class="banner" id="b4">Extra 10% Cashback with UPI</div>
+        <div class="banner" id="b5">Mega Sale Ends Sunday</div>
+      </div>
+    </section>
+    <section>
+      <h2>Rotating spotlight (changes every 5 seconds)</h2>
+      <div id="rotator">
+        <div class="slide" style="background:#e8590c">Diwali Dhamaka: Up to 70% OFF</div>
+        <div class="slide" style="background:#2f9e44">New Arrivals: Fresh Styles Daily</div>
+        <div class="slide" style="background:#7048e8">Members Get Early Access</div>
+        <div class="slide" style="background:#1c7ed6">Free Shipping This Week</div>
+        <div class="slide" style="background:#c2255c">Gift Cards: Buy 2 Get 1</div>
+      </div>
+    </section>
+  </main>
+  <footer><small>jQuery Assignment 9</small></footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="special-offer-banner.js"></script>
+</body>
+</html>

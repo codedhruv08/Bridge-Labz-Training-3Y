@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multi jQuery Widgets</title>
+  <style>
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Arial, sans-serif; max-width: 860px; margin: 0 auto; padding: 24px; background: #f5f6fa; color: #222; line-height: 1.5; }
+header, footer { text-align: center; padding: 12px; }
+h1 { margin: 0 0 4px; }
+section { background: #fff; border-radius: 10px; padding: 18px; margin: 16px 0; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+button { background: #3b5bdb; color: #fff; border: 0; padding: 8px 14px; border-radius: 6px; cursor: pointer; margin: 4px 4px 4px 0; font-size: 14px; }
+button:hover { background: #2f49b0; }
+input, select { padding: 8px; border: 1px solid #bbb; border-radius: 6px; margin: 4px 4px 4px 0; font-size: 14px; }
+ul { list-style: none; padding: 0; margin: 0; }
+    .widget { border: 2px solid #ddd; border-radius: 8px; padding: 14px; margin-bottom: 12px; cursor: pointer; }
+    .widget.active { border-color: #3b5bdb; background: #edf2ff; }
+    #carousel { position: relative; height: 70px; }
+    .cslide { position: absolute; inset: 0; display: none; line-height: 70px; text-align: center; color: #fff; font-weight: bold; border-radius: 6px; }
+    #modalOverlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5); }
+    #modalBox { background: #fff; width: 320px; margin: 15vh auto; padding: 20px; border-radius: 10px; }
+    #tooltip { position: absolute; background: #333; color: #fff; padding: 4px 8px; border-radius: 4px; font-size: 12px; display: none; z-index: 10; }
+  </style>
+</head>
+<body>
+  <header><h1>Multi jQuery Dashboard</h1><p id="versions"></p></header>
+  <main>
+    <section>
+      <article class="widget" id="w1"><h3>Carousel Widget (jQuery 1.x)</h3>
+        <div id="carousel">
+          <div class="cslide" style="background:#e8590c">Slide 1: New Courses</div>
+          <div class="cslide" style="background:#2f9e44">Slide 2: Live Webinars</div>
+          <div class="cslide" style="background:#7048e8">Slide 3: Top Mentors</div>
+          <div class="cslide" style="background:#1c7ed6">Slide 4: Community Events</div>
+          <div class="cslide" style="background:#c2255c">Slide 5: Weekly Quiz</div>
+        </div>
+      </article>
+      <article class="widget" id="w2"><h3>Notifications Widget (jQuery 3.x)</h3>
+        <button id="openModal">Show Notification</button>
+      </article>
+      <article class="widget" id="w3"><h3>Stats Widget</h3>
+        <span class="tip" data-tip="Total registered users">Users: 1,240</span> |
+        <span class="tip" data-tip="Courses currently live">Courses: 36</span> |
+        <span class="tip" data-tip="Average rating out of 5">Rating: 4.7</span>
+      </article>
+      <article class="widget" id="w4"><h3>Tasks Widget</h3>
+        <span class="tip" data-tip="Tasks waiting for review">Pending: 8</span>
+      </article>
+      <article class="widget" id="w5"><h3>Help Widget</h3>
+        <span class="tip" data-tip="Contact support@example.com">Need help? Hover here</span>
+      </article>
+    </section>
+  </main>
+  <div id="modalOverlay"><div id="modalBox"><h3>Notification</h3><p>You have 3 new messages.</p><button id="closeModal">Close</button></div></div>
+  <div id="tooltip"></div>
+  <footer><small>jQuery Assignment 9</small></footer>
+
+  <!-- Load jQuery 1.12.4 first, then jQuery 3.7.1. noConflict is resolved in the JS file. -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="multi-jquery-widgets.js"></script>
+</body>
+</html>

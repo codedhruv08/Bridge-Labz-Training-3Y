@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Highlight</title>
+  <style>
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Arial, sans-serif; max-width: 860px; margin: 0 auto; padding: 24px; background: #f5f6fa; color: #222; line-height: 1.5; }
+header, footer { text-align: center; padding: 12px; }
+h1 { margin: 0 0 4px; }
+section { background: #fff; border-radius: 10px; padding: 18px; margin: 16px 0; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+button { background: #3b5bdb; color: #fff; border: 0; padding: 8px 14px; border-radius: 6px; cursor: pointer; margin: 4px 4px 4px 0; font-size: 14px; }
+button:hover { background: #2f49b0; }
+input, select { padding: 8px; border: 1px solid #bbb; border-radius: 6px; margin: 4px 4px 4px 0; font-size: 14px; }
+ul { list-style: none; padding: 0; margin: 0; }
+    .product { border: 1px solid #ddd; border-radius: 8px; padding: 12px; margin-bottom: 10px; cursor: pointer; position: relative; background: #fff; }
+    .product h3 { margin: 0; }
+    .details { display: none; margin-top: 8px; color: #555; font-size: 14px; }
+    .highlight { background: #fff3bf !important; }
+    /* Attribute selector: products having a data-discount attribute */
+    .product[data-discount] { border-left: 6px solid #e8590c; }
+    .product[data-discount]::after { content: attr(data-discount) " OFF"; position: absolute; right: 50px; top: 12px; color: #e8590c; font-weight: bold; }
+    .fav { position: absolute; right: 14px; top: 8px; font-size: 22px; color: #aaa; cursor: pointer; }
+    .fav.selected { color: #e03131; }
+    .product[data-stock="0"] h3 { text-decoration: line-through; color: #888; }
+  </style>
+</head>
+<body>
+  <header><h1>Product Highlight</h1><p>Click, hover and favorite products</p></header>
+  <main>
+    <section id="products">
+      <article class="product" data-name="Wireless Headphones" data-stock="12" data-discount="20%">
+        <h3>Wireless Headphones</h3><span class="fav" title="Favorite">&#9829;</span>
+        <p class="details">Bluetooth 5.0, 30-hour battery, noise cancelling.</p>
+      </article>
+      <article class="product" data-name="Smart Watch" data-stock="5">
+        <h3>Smart Watch</h3><span class="fav" title="Favorite">&#9829;</span>
+        <p class="details">Heart-rate tracking, GPS, water resistant.</p>
+      </article>
+      <article class="product" data-name="Running Shoes" data-stock="0" data-discount="35%">
+        <h3>Running Shoes</h3><span class="fav" title="Favorite">&#9829;</span>
+        <p class="details">Lightweight mesh, cushioned sole. (Currently unavailable)</p>
+      </article>
+      <article class="product" data-name="Laptop Backpack" data-stock="30">
+        <h3>Laptop Backpack</h3><span class="fav" title="Favorite">&#9829;</span>
+        <p class="details">Fits 15.6" laptops, waterproof, USB charging port.</p>
+      </article>
+      <article class="product" data-name="Desk Lamp" data-stock="0">
+        <h3>Desk Lamp</h3><span class="fav" title="Favorite">&#9829;</span>
+        <p class="details">LED, 3 brightness levels, touch control.</p>
+      </article>
+    </section>
+  </main>
+  <footer><small>jQuery Assignment 9</small></footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="product-highlight.js"></script>
+</body>
+</html>

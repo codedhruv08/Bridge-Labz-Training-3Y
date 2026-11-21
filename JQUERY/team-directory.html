@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team Members Directory</title>
+  <style>
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Arial, sans-serif; max-width: 860px; margin: 0 auto; padding: 24px; background: #f5f6fa; color: #222; line-height: 1.5; }
+header, footer { text-align: center; padding: 12px; }
+h1 { margin: 0 0 4px; }
+section { background: #fff; border-radius: 10px; padding: 18px; margin: 16px 0; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+button { background: #3b5bdb; color: #fff; border: 0; padding: 8px 14px; border-radius: 6px; cursor: pointer; margin: 4px 4px 4px 0; font-size: 14px; }
+button:hover { background: #2f49b0; }
+input, select { padding: 8px; border: 1px solid #bbb; border-radius: 6px; margin: 4px 4px 4px 0; font-size: 14px; }
+ul { list-style: none; padding: 0; margin: 0; }
+    .department { border: 1px solid #ddd; border-radius: 8px; padding: 10px; margin-bottom: 12px; }
+    .dept-name { cursor: pointer; margin: 0 0 6px; display: inline-block; }
+    .members > li { padding: 8px 10px; margin: 4px 0; border-radius: 6px; background: #f8f9fa; }
+    .name { cursor: pointer; font-weight: 600; }
+    .manager .name { color: #c92a2a; }
+    .contact { display: none; margin-left: 10px; font-size: 13px; color: #555; }
+    .report-hl { background: #ffec99 !important; }
+    .sibling-hl { background: #b2f2bb !important; }
+    .picked { background: #74c0fc !important; }
+  </style>
+</head>
+<body>
+  <header><h1>Team Members Directory</h1></header>
+  <main>
+    <section>
+      <button id="randomBtn">Select Random Employee</button>
+      <p><small>Click a manager (red) to highlight reports. Click a department title to color its members. Hover a name for contact info.</small></p>
+      <div id="directory">
+
+        <article class="department">
+          <h3 class="dept-name">Engineering</h3>
+          <button class="collapseBtn">Collapse / Expand</button>
+          <ul class="members">
+            <li class="employee manager" data-id="m1"><span class="name">Asha Verma (Manager)</span><span class="contact">asha@company.com | 555-0101</span></li>
+            <li class="employee" data-manager="m1"><span class="name">Rohan Gupta</span><span class="contact">rohan@company.com | 555-0102</span></li>
+            <li class="employee" data-manager="m1"><span class="name">Neha Singh</span><span class="contact">neha@company.com | 555-0103</span></li>
+            <li class="employee" data-manager="m1"><span class="name">Karan Mehta</span><span class="contact">karan@company.com | 555-0104</span></li>
+          </ul>
+        </article>
+
+        <article class="department">
+          <h3 class="dept-name">Design</h3>
+          <button class="collapseBtn">Collapse / Expand</button>
+          <ul class="members">
+            <li class="employee manager" data-id="m2"><span class="name">Priya Nair (Manager)</span><span class="contact">priya@company.com | 555-0201</span></li>
+            <li class="employee" data-manager="m2"><span class="name">Aman Joshi</span><span class="contact">aman@company.com | 555-0202</span></li>
+            <li class="employee" data-manager="m2"><span class="name">Sara Khan</span><span class="contact">sara@company.com | 555-0203</span></li>
+          </ul>
+        </article>
+
+        <article class="department">
+          <h3 class="dept-name">Marketing</h3>
+          <button class="collapseBtn">Collapse / Expand</button>
+          <ul class="members">
+            <li class="employee manager" data-id="m3"><span class="name">Vikram Rao (Manager)</span><span class="contact">vikram@company.com | 555-0301</span></li>
+            <li class="employee" data-manager="m3"><span class="name">Divya Sharma</span><span class="contact">divya@company.com | 555-0302</span></li>
+            <li class="employee" data-manager="m3"><span class="name">Imran Ali</span><span class="contact">imran@company.com | 555-0303</span></li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+  </main>
+  <footer><small>jQuery Assignment 9</small></footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="team-directory.js"></script>
+</body>
+</html>

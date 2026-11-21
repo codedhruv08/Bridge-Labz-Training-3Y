@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome Page Greeting</title>
+  <style>
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Arial, sans-serif; max-width: 860px; margin: 0 auto; padding: 24px; background: #f5f6fa; color: #222; line-height: 1.5; }
+header, footer { text-align: center; padding: 12px; }
+h1 { margin: 0 0 4px; }
+section { background: #fff; border-radius: 10px; padding: 18px; margin: 16px 0; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+button { background: #3b5bdb; color: #fff; border: 0; padding: 8px 14px; border-radius: 6px; cursor: pointer; margin: 4px 4px 4px 0; font-size: 14px; }
+button:hover { background: #2f49b0; }
+input, select { padding: 8px; border: 1px solid #bbb; border-radius: 6px; margin: 4px 4px 4px 0; font-size: 14px; }
+ul { list-style: none; padding: 0; margin: 0; }
+    #greeting { cursor: pointer; font-size: 2rem; color: #3b5bdb; text-align: center; }
+    #welcomeMsg { text-align: center; font-size: 1.1rem; }
+    .controls { text-align: center; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome Page</h1>
+    <p>Greeting changes with the time of day</p>
+  </header>
+  <main>
+    <section>
+      <label for="visitorName">Your name:</label>
+      <input type="text" id="visitorName" placeholder="Enter your name">
+      <h2 id="greeting" title="Click me!"></h2>
+      <p id="welcomeMsg">Welcome to our website! We are glad you are here.</p>
+      <div class="controls">
+        <button id="changeBtn">Change Greeting</button>
+        <button id="toggleBtn">Toggle Welcome Message</button>
+      </div>
+    </section>
+  </main>
+  <footer><small>jQuery Assignment 9</small></footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="welcome-greeting.js"></script>
+</body>
+</html>

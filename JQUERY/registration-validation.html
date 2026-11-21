@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Form Validation</title>
+  <style>
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Arial, sans-serif; max-width: 860px; margin: 0 auto; padding: 24px; background: #f5f6fa; color: #222; line-height: 1.5; }
+header, footer { text-align: center; padding: 12px; }
+h1 { margin: 0 0 4px; }
+section { background: #fff; border-radius: 10px; padding: 18px; margin: 16px 0; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+button { background: #3b5bdb; color: #fff; border: 0; padding: 8px 14px; border-radius: 6px; cursor: pointer; margin: 4px 4px 4px 0; font-size: 14px; }
+button:hover { background: #2f49b0; }
+input, select { padding: 8px; border: 1px solid #bbb; border-radius: 6px; margin: 4px 4px 4px 0; font-size: 14px; }
+ul { list-style: none; padding: 0; margin: 0; }
+    form { max-width: 420px; }
+    label { display: block; margin-top: 10px; font-weight: 600; }
+    input { width: 100%; }
+    .error { color: #e03131; font-size: 13px; min-height: 18px; margin: 0; }
+    #success { display: none; background: #d3f9d8; color: #2b8a3e; padding: 10px; border-radius: 6px; margin-top: 12px; }
+  </style>
+</head>
+<body>
+  <header><h1>Create Account</h1></header>
+  <main>
+    <section>
+      <form id="regForm" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Full name">
+        <p class="error" id="nameErr"></p>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="you@example.com">
+        <p class="error" id="emailErr"></p>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="At least 8 characters">
+        <p class="error" id="passErr"></p>
+
+        <button type="submit">Register</button>
+        <p id="success"></p>
+      </form>
+      <p><small>Already registered emails (for the uniqueness check): admin@example.com, test@example.com, user@example.com</small></p>
+    </section>
+  </main>
+  <footer><small>jQuery Assignment 9</small></footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="registration-validation.js"></script>
+</body>
+</html>

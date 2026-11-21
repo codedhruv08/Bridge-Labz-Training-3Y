@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive FAQ</title>
+  <style>
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", Arial, sans-serif; max-width: 860px; margin: 0 auto; padding: 24px; background: #f5f6fa; color: #222; line-height: 1.5; }
+header, footer { text-align: center; padding: 12px; }
+h1 { margin: 0 0 4px; }
+section { background: #fff; border-radius: 10px; padding: 18px; margin: 16px 0; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+button { background: #3b5bdb; color: #fff; border: 0; padding: 8px 14px; border-radius: 6px; cursor: pointer; margin: 4px 4px 4px 0; font-size: 14px; }
+button:hover { background: #2f49b0; }
+input, select { padding: 8px; border: 1px solid #bbb; border-radius: 6px; margin: 4px 4px 4px 0; font-size: 14px; }
+ul { list-style: none; padding: 0; margin: 0; }
+    .faq-item { border: 1px solid #ddd; border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+    .question { margin: 0; padding: 12px; cursor: pointer; background: #f1f3f5; font-size: 1rem; }
+    .answer { display: none; padding: 12px; }
+    .q-hover { color: #e8590c; }
+    .q-active { background: #d0ebff; }
+  </style>
+</head>
+<body>
+  <header><h1>Frequently Asked Questions</h1><p>Click a question to open it. Double-click any question to collapse all.</p></header>
+  <main>
+    <section id="faq">
+      <article class="faq-item">
+        <h3 class="question">How do I create an account?</h3>
+        <div class="answer"><p>Click "Sign Up", fill in the form and verify your email.</p>
+          <input type="text" placeholder="Ask a follow-up..."></div>
+      </article>
+      <article class="faq-item">
+        <h3 class="question">What payment methods are accepted?</h3>
+        <div class="answer"><p>We accept credit/debit cards, UPI and net banking.</p>
+          <input type="text" placeholder="Ask a follow-up..."></div>
+      </article>
+      <article class="faq-item">
+        <h3 class="question">How can I track my order?</h3>
+        <div class="answer"><p>Open "My Orders" and select the order to see live status.</p>
+          <input type="text" placeholder="Ask a follow-up..."></div>
+      </article>
+      <article class="faq-item">
+        <h3 class="question">What is the return policy?</h3>
+        <div class="answer"><p>Items can be returned within 7 days of delivery.</p>
+          <input type="text" placeholder="Ask a follow-up..."></div>
+      </article>
+      <article class="faq-item">
+        <h3 class="question">How do I contact support?</h3>
+        <div class="answer"><p>Email support@example.com or use the live chat (9am-6pm).</p>
+          <input type="text" placeholder="Ask a follow-up..."></div>
+      </article>
+    </section>
+  </main>
+  <footer><small>jQuery Assignment 9</small></footer>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="interactive-faq.js"></script>
+</body>
+</html>
